@@ -83,4 +83,41 @@ img { display: block; max-width: 100%; height: auto; }
 .badge { display: inline-block; align-self: flex-start; margin-bottom: 0.5rem; padding: 0.15rem 0.6rem; border-radius: 99px; background: var(--primary); color: #fff; font-size: 0.8rem; font-weight: 700; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
+.plans {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
 
+.btn {
+  width: 100%;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.plan--featured {
+  transform: scale(1.05);
+}
+.card {
+  width: 30%;
+}
+/* I test the result, It's seutable for desktop and tablet*/
+
+@media screen and (max-width:400px) {  /* so this one for phone*/
+  .plans {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  .plan--featured {
+    order: -1;
+  }
+
+  
+}
