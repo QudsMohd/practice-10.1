@@ -91,3 +91,99 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
 
+
+.front {
+  display: grid;
+  grid-template-columns: 1fr 1fr 18rem;
+  grid-template-areas:
+    "lead lead latest"
+    "politics science latest"
+    "sport culture latest";
+  gap: 1rem;
+}
+
+.story--lead {
+  grid-area: lead;
+}
+
+.story:nth-child(2) {
+  grid-area: politics;
+}
+
+.story:nth-child(3) {
+  grid-area: science;
+}
+
+.story:nth-child(4) {
+  grid-area: sport;
+}
+
+.story:nth-child(5) {
+  grid-area: culture;
+}
+
+.latest {
+  grid-area: latest;
+}
+
+.latest li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.latest time {
+  width: 3rem;
+}
+
+.latest a {
+  flex: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .front {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "lead lead"
+      "politics science"
+      "sport culture"
+      "latest latest";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .front {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "lead"
+      "politics"
+      "science"
+      "sport"
+      "culture"
+      "latest";
+  }
+
+  .story:nth-child(2),
+  .story:nth-child(3),
+  .story:nth-child(4),
+  .story:nth-child(5) {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .story:nth-child(2) img,
+  .story:nth-child(3) img,
+  .story:nth-child(4) img,
+  .story:nth-child(5) img {
+    width: 35%;
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .story-body {
+    flex: 1;
+    min-width: 0;
+  }
+}
+/* I complete this task with help of ai, but with understand and learn each step*/
+

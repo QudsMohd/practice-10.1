@@ -94,3 +94,89 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
 
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.dash {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat {
+  grid-column: span 1;
+}
+
+.chart {
+  grid-column: span 3;
+}
+
+.activity {
+  grid-column: 4;
+  grid-row: 2 / span 2;
+}
+
+.goals {
+  grid-column: span 3;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.bar {
+  flex: 1;
+}
+
+.act {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media screen and (max-width: 800px) {
+
+  .dash {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart {
+    grid-column: span 2;
+  }
+
+  .activity {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  .goals {
+    grid-column: span 1;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .dash {
+    grid-template-columns: 1fr;
+  }
+
+  .chart,
+  .activity,
+  .goals {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+}
+

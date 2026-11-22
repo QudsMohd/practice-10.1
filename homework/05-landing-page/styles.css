@@ -102,3 +102,95 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text,
+.hero-img {
+    width: 50%;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.feature {
+    padding: 20px;
+}
+
+.logo-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cta-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .hero-inner {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero-img {
+        width: 100%;
+    }
+
+    .hero-img {
+        max-width: 520px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-links {
+        display: none;
+    }
+
+    .cta-inner,
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+

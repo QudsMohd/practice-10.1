@@ -80,3 +80,51 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
 
+.timeline {
+  display: flex;
+  gap: 1rem;
+}
+
+.event {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-card {
+  flex: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .event {
+    flex: none;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .time {
+    width: 5rem;
+    flex-shrink: 0;
+  }
+
+  .event-card {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .event {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .time {
+    width: auto;
+  }
+}
+

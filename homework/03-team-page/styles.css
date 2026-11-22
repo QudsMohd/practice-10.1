@@ -83,3 +83,46 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
 
+
+.team-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.member {
+  width: 22%;
+}
+
+.join {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .member {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .team-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .member {
+    width: 45%;
+  }
+}
